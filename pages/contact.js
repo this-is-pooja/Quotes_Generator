@@ -5,7 +5,7 @@ const contact=()=>(
       <h1>Made by :- Pooja Soliwal</h1>
       <h1>gmail-id:- poojasoliwal2222@gmail.com</h1>
       <h1>Mobile no:-+91 9548016235</h1>
-      <h2>Frontend Developer of React js </h2>
+      <h2>A frontend Devoted constant web learner.</h2>
       <style jsx global>
      {`
      h1,h2{
