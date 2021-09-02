@@ -1,11 +1,11 @@
-import Link from 'next/link';
 import Layout from "./com/layout";
 import {useState} from "react";
-import {Box,Center,Textarea} from "@chakra-ui/react";
+import {Box,Center,Textarea,HStack,Spacer} from "@chakra-ui/react";
 import { HexColorPicker } from 'react-colorful';
 import domtoimage from "dom-to-image";
 function Thought(){
   const [color,setColor]=useState("black");
+  const [c,sc]=useState("white");
   const [value,setValue]=useState("")
   const change=(event)=>{
     setValue(event.target.value);
@@ -18,6 +18,18 @@ function Thought(){
       link.href = dataUrl;
       link.click();
   });
+  }
+  const green=()=>{
+    sc("green");
+  }
+  const red=()=>{
+    sc("red");
+  }
+  const black=()=>{
+    sc("black");
+  }
+  const white=()=>{
+    sc("white");
   }
     return(
         <>
@@ -32,7 +44,7 @@ function Thought(){
                 fonts="italic"
                 style={{borderRadius:"10px"}}
                 onChange={change}
-                color="white" 
+                color={c} 
                 fontSize="2rem"
                 align="center"
                 mt="2rem" 
@@ -43,15 +55,24 @@ function Thought(){
             </Center>
             </div>
             <br />
-            <Center>
-              <Box>
-                <HexColorPicker  onChange={setColor}/>
-              </Box>
-            </Center>
+            <HStack>
+            <Box ml="25rem">
+             <HexColorPicker  onChange={setColor}/>
+            </Box>
             <br />
+            <Box as="button" bg="green" h="4rem"w="8rem"style={{borderRadius:"6px"}}onClick={green}></Box>
+            <br />
+            <Box as="button" bg="red" h="4rem"w="8rem"style={{borderRadius:"6px"}} onClick={red}></Box>
+            <br /> 
+            <Box as="button" bg="black" h="4rem"w="8rem"style={{borderRadius:"6px"}} onClick={black}></Box>
             
+            <br /> 
+            <Box as="button" bg="white" h="4rem"w="8rem"style={{borderRadius:"6px",border:"1px solid black"}} onClick={white}></Box>
+            <Spacer />
+            </HStack>
+            <br />
             <Center>
-              <Box as="button" fontSize="md" color="red" w="12rem"fontWeight="bold" h="2.5rem"
+              <Box as="button" fontSize="md" color="red" w="16rem"fontWeight="bold" h="2.5rem"
                 border="3px solid #8D021F"style={{borderRadius:"1rem"}} onClick={Download}>
                  Download your Quote
               </Box>

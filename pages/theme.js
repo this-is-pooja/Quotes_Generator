@@ -1,5 +1,4 @@
 import { extendTheme } from "@chakra-ui/react";
-
 const theme = extendTheme({
   colors: {
     red: "#8D021F",
@@ -15,4 +14,5 @@ const theme = extendTheme({
     sec: "serif",
   }
 });
+
 export default theme;
