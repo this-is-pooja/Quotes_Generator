@@ -1,9 +1,10 @@
-import Layout from "./com/layout";
+import React from "react";
+import Layout from "/layout";
 import {useState} from "react";
 import {Box,Center,Textarea,HStack,Spacer} from "@chakra-ui/react";
 import { HexColorPicker } from 'react-colorful';
 import domtoimage from "dom-to-image";
-function Thought(){
+export default function Thought(){
   const [color,setColor]=useState("black");
   const [c,sc]=useState("white");
   const [value,setValue]=useState("")
@@ -82,4 +83,3 @@ function Thought(){
         </>
     )
 }
-export default Thought

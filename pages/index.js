@@ -1,9 +1,10 @@
+
 import { Box,Text,Center,Flex,HStack } from "@chakra-ui/react";
 import {GrAdd} from "react-icons/gr";
-import Layout from "./com/layout";
+import Layout from "/layout";
 import Link from 'next/link';
 import Head from "next/head";
-function Home(){
+export default function Home(){
 return(
   <>
   <Head><title>Quotes_Generator</title></Head>
@@ -23,7 +24,7 @@ return(
         <br />
         <br />
         <Center>
-          <Link href="/Make_thoughts">
+          <Link href="/Make_thoughts" passHref>
           <HStack direction="row" >
          <Flex w="9rem" h="2.5rem"border="3px solid #8D021F"style={{borderRadius:"1rem"}}>
 						<Box mt="0.6rem"ml="1.9rem"mr="0.2rem"><GrAdd /></Box>
@@ -39,4 +40,3 @@ return(
   </>
 )
 }
-export default Home

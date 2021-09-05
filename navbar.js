@@ -1,5 +1,5 @@
 import { Box,Flex,HStack} from "@chakra-ui/react";
-function Navbar(){
+export default function Navbar(){
     return(
         <>
          <Flex bg="red" h="4rem" w="100%">
@@ -14,4 +14,3 @@ function Navbar(){
         </>
     )
 }
-export default Navbar

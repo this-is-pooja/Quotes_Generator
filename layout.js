@@ -1,5 +1,5 @@
-import Navbar from "./navbar";
-function Layout(props){
+import Navbar from "/navbar";
+export default function Layout(props){
     return(
         <>
         <Navbar />
@@ -7,4 +7,3 @@ function Layout(props){
         </>
     )
 }
-export default Layout
