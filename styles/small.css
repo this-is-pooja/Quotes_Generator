@@ -1,7 +1,7 @@
 .small .react-colorful{
-    width: 8rem;
-    height: 24rem;
-    margin-top: 4rem;
+    width:100%;
+    height: 16rem;
+    margin: 2rem 0;
   }
   .small .react-colorful__hue {
     height: 20px;
